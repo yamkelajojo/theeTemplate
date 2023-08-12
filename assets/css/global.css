@@ -9,7 +9,7 @@
   padding: 0;
 }
 
-nav{
+nav {
   border: solid 1px red;
   display: flex;
   align-items: center;
@@ -17,28 +17,31 @@ nav{
   padding: 0.75% 1.5%;
 }
 
-ul{
-  list-style: none;
-  text-decoration: none;
+#navTabsDiv {
   border: solid 1px red;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-a{
+ul {
+  list-style: none;
   text-decoration: none;
 }
 
-h1{
-  font-size: 4rem;
+a {
+  text-decoration: none;
 }
 
-.container{
+h1 {
+  font-size: 2rem;
+}
+
+.container {
   max-width: 1200px;
 }
 
-
+/* ______________________________________________________________________ */
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -46,21 +49,22 @@ h1{
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
+  left: -100px;
+  background-color: #3f3f3f; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  display: flex;
+  flex-direction: column;
 }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
   transition: 0.3s;
+  border: solid 1px red;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -70,21 +74,39 @@ h1{
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
   font-size: 36px;
-  margin-left: 50px;
+}
+/* ______________________________________________________________________ */
+
+/* __________________________MEDIA QUERIES___________________________________ */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) and (min-width: 600px) {
+  #navTabsDiv {
+    display: none;
+    background-color: saddlebrown;
+  }
+  h1 {
+    font-size: 1rem;
+  }
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  #navTabsDiv {
+    display: none;
+  }
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* __________________________MEDIA QUERIES___________________________________ */
