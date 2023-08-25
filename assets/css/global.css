@@ -9,19 +9,49 @@
   padding: 0;
 }
 
-nav {
+#title {
+  font-size: 50px;
+}
+
+.py-5 {
+  padding: 1% 20.5%;
+}
+
+.py-4 {
+  padding: 1% 10%;
+}
+
+.py-3 {
+  padding: 1% 20.5%;
+}
+
+.py-2 {
+  padding: 1% 20.5%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  padding: 1% 40.5%;
   border: solid 1px red;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75% 1.5%;
 }
 
 #navTabsDiv {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 3rem;
+  font-size: 1.3rem;
 }
 
 ul {
@@ -33,7 +63,7 @@ a {
   text-decoration: none;
 }
 
-h1 {
+#title {
   font-size: 2rem;
 }
 
@@ -41,30 +71,47 @@ h1 {
   max-width: 1200px;
 }
 
-/* ______________________________________________________________________ */
-/* The side navigation menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39); /* Semi-transparent black background */
+  z-index: 2; /* Ensure the overlay is on top of other content */
+  /* display: none; */
+}
+
+/* -------------------------THE SIDE NAVIGATION MENU------------------------- */
 .sidenav {
   height: 100%; /* 100% Full-height */
   width: max-content; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 3; /* Stay on top */
   top: 0; /* Stay at the top */
-  left: -100px;
+  left: 0;
   background-color: #3f3f3f; /* Black*/
+  background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   display: flex;
   flex-direction: column;
+}
+
+#sidenavTitleDiv {
+  display: flex;
+  padding-top: 16px;
 }
 
 /* The navigation menu links */
 .sidenav a {
   text-decoration: none;
-  font-size: 25px;
   color: #818181;
-  display: block;
+  /* display: block; */
   transition: 0.3s;
-  border: solid 1px red;
+}
+
+#sidenavTitle {
+  font-size: 1rem;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -76,37 +123,129 @@ h1 {
 .sidenav .closebtn {
   font-size: 36px;
 }
-/* ______________________________________________________________________ */
+
+#sidenavTitleDiv,
+#sidenavLinksDiv {
+  padding: 20px 20px 0 20px;
+  background-color: wheat;
+}
+/* -------------------------THE SIDE NAVIGATION MENU------------------------- */
 
 /* __________________________MEDIA QUERIES___________________________________ */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) and (min-width: 600px) {
-  #navTabsDiv {
-    display: none;
-    background-color: saddlebrown;
-  }
-  h1 {
-    font-size: 1rem;
-  }
-}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-  #navTabsDiv {
-    display: none;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    /* padding: 1% 1000px; */
+    /* border: solid 1px red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
   }
-} */
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+  #smallerNavHeader {
+    border: solid 1px red;
+  }
+
+  #biggerHeader {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+  }
+
+  #theSlotArea {
+    display: flex;
+    justify-content: center;
+    padding: 1% 20.5%;
+    max-width: 1200px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  #hamburgerButton {
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .navbar {
+    padding: 1% 5%;
+  }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #hamburgerButton {
+    display: none !important;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .navbar {
+    border: solid 1px red;
+    padding: 1% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #theSlotArea {
+    padding: 1% 10%;
+  }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  #hamburgerButton {
+    justify-self: flex-start !important;
+    /* align-self: center; */
+  }
+
+  #navTabsDiv {
+    display: none !important;
+    background-color: rgb(81, 19, 139);
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  .navbar {
+    justify-content: flex-start;
+    padding: 1.5% 8%;
+  }
+  .logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(
+      100% - 50px
+    ); /* Adjust width to leave space for hamburger button */
+  }
+
+  #theSlotArea {
+    padding: 1% 8%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #navTabsDiv {
+    display: none;
+    background-color: saddlebrown;
+  }
+  /* nav {
+    display: flex;
+  } */
+
+  #hamburgerButton {
+    justify-self: flex-start !important;
+    /* align-self: flex-start !important; */
+  }
+}
 /* __________________________MEDIA QUERIES___________________________________ */

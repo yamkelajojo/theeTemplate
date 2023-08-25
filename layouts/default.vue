@@ -1,56 +1,65 @@
 <template>
   <div>
-    <header>
-      <nav>
-        <button id="hamburgerButton" @click="toggleSideNav($event)">HAM</button>
-        <h1><NuxtLink to="/">TheStore</NuxtLink></h1>
-        <ul id="navTabsDiv">
-          <li><NuxtLink to="/">Home</NuxtLink></li>
-          <li><NuxtLink to="/products">Products</NuxtLink></li>
-          <li><NuxtLink to="/about">About</NuxtLink></li>
-        </ul>
-      </nav>
+    <header id="biggerHeader">
+      <header id="smallerNavHeader">
+        <nav class="navbar">
+          <button id="hamburgerButton" @click="toggleSideMenu">
+            <Icon name="nimbus:align-left" size="1.5rem" />
+          </button>
+          <div class="logoDiv">
+            <NuxtLink id="title" to="/">
+              <h1>ThaSto'</h1>
+            </NuxtLink>
+          </div>
+          <ul id="navTabsDiv">
+            <NuxtLink to="/"><p>Home</p></NuxtLink>
+            <NuxtLink to="/products"><p>Products</p></NuxtLink>
+            <NuxtLink to="/about"><p>About</p></NuxtLink>
+          </ul>
+        </nav>
+      </header>
     </header>
 
-    <div id="mySidenav" class="sidenav">
-      <div id="closeDiv">
-        <a class="closebtn" @click="toggleSideNav($event)">&times;</a>
+    <transition name="overlay">
+      <div class="overlay" v-if="sideNavShown" @click="toggleSideMenu"></div>
+    </transition>
+
+    <transition name="leftSlide">
+      <div class="sidenav" ref="sidenav" v-if="sideNavShown">
+        <div id="sidenavTitleDiv">
+          <button id="hamburgerButton" @click="toggleSideMenu">
+            <Icon name="nimbus:close" size="1.2rem" />
+          </button>
+          <NuxtLink id="sidenavTitle" to="/" @click="toggleSideMenu">
+            <h1>TheSto'</h1>
+          </NuxtLink>
+        </div>
+        <div id="sidenavLinksDiv">
+          <NuxtLink to="/products"><p>Products</p></NuxtLink>
+          <NuxtLink to="/about"><p>About</p></NuxtLink>
+        </div>
       </div>
-      <a href="#">About</a>
-      <a href="#">Products</a>
-    </div>
+    </transition>
 
     <!-- output page content -->
-    <div>
+    <div id="theSlotArea">
       <slot />
     </div>
   </div>
 </template>
 
 <script setup>
-// const sideNav = document.getElementById("mySidenav")
-const toggleSideNav = (e) => {
-  console.log(menuPressed.value);
-  console.log(e.target);
-  if (sideNav.value.style.width > 0) {
-    sideNav.value.style.width = 0;
-  } else {
-    sideNav.value.style.width = 100;
-  }
-  menuPressed.value = !menuPressed.value;
+import { ref } from "vue";
+
+const sideNavShown = ref(false);
+
+const toggleSideMenu = () => {
+  sideNavShown.value = !sideNavShown.value;
+  console.log(sideNavShown.value);
 };
 </script>
 
 <style scoped>
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) and (min-width: 600px) {
-  #navTabsDiv {
-    display: none;
-  }
-  h1 {
-    font-size: 12px;
-  }
-}
 .router-link-exact-active {
   color: #12b488;
 }

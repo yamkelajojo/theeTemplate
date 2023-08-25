@@ -1,0 +1,51 @@
+/* -----------------------SIDENAV-------------------------- */
+.leftSlide-enter-from {
+  opacity: 0.5;
+  left: -50%;
+}
+.leftSlide-enter-to {
+  opacity: 1;
+  left: 0px;
+}
+.leftSlide-enter-active {
+  transition: all 0.5s ease-in;
+}
+
+.leftSlide-leave-from {
+  opacity: 1;
+  left: 0px;
+}
+
+.leftSlide-leave-to {
+  opacity: 0;
+  left: -50%;
+}
+
+.leftSlide-leave-active {
+  transition: all 0.5s ease-out;
+}
+/* -----------------------OVERLAY-------------------------- */
+.overlay-enter-from {
+  opacity: 0;
+}
+.overlay-enter-to {
+  opacity: 1;
+}
+.overlay-enter-active {
+  transition: all 0.5s ease-in;
+}
+
+.overlay-leave-from {
+  opacity: 1;
+}
+
+.overlay-leave-to {
+  opacity: 0;
+}
+
+.overlay-leave-active {
+  transition: all 0.5s ease-out;
+}
+/* -----------------------OVERLAY-------------------------- */
+
+/* -----------------------SIDENAV-------------------------- */

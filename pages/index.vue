@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Home</h2>
+    <h2 class="main-padding">Home</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quod totam
       asperiores labore ea voluptatum reiciendis tempore distinctio sit veniam.
