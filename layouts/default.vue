@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="layerBody">
     <header id="biggerHeader">
       <header id="smallerNavHeader">
         <nav class="navbar">
@@ -35,8 +35,12 @@
           </NuxtLink>
         </div>
         <div id="sidenavLinksDiv">
-          <NuxtLink to="/products"><p>Products</p></NuxtLink>
-          <NuxtLink to="/about"><p>About</p></NuxtLink>
+          <div class="sidenavLink">
+            <NuxtLink to="/products"><p>Products</p></NuxtLink>
+          </div>
+          <div class="sidenavLink">
+            <NuxtLink to="/about"><p>About</p></NuxtLink>
+          </div>
         </div>
       </div>
     </transition>
@@ -45,6 +49,9 @@
     <div id="theSlotArea">
       <slot />
     </div>
+    <footer class="navbar">
+      <p id="footerTitle">&copy; 2023 Dojo. All rights reserved.</p>
+    </footer>
   </div>
 </template>
 

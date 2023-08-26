@@ -9,6 +9,12 @@
   padding: 0;
 }
 
+#layerBody {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 #title {
   font-size: 50px;
 }
@@ -39,7 +45,7 @@ button {
 
 .navbar {
   padding: 1% 40.5%;
-  border: solid 1px red;
+  /* border: solid 1px rgb(0, 255, 4); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,10 +73,6 @@ a {
   font-size: 2rem;
 }
 
-.container {
-  max-width: 1200px;
-}
-
 .overlay {
   position: fixed;
   top: 0;
@@ -82,6 +84,14 @@ a {
   /* display: none; */
 }
 
+#theSlotArea {
+  flex: 1;
+}
+
+#biggerHeader {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
+}
+
 /* -------------------------THE SIDE NAVIGATION MENU------------------------- */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -91,7 +101,7 @@ a {
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #3f3f3f; /* Black*/
-  background-color: white;
+  background-color: rgb(140, 150, 152);
   overflow-x: hidden; /* Disable horizontal scroll */
   display: flex;
   flex-direction: column;
@@ -129,6 +139,13 @@ a {
   padding: 20px 20px 0 20px;
   background-color: wheat;
 }
+
+footer.navbar {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
+  padding: 2% auto;
+}
 /* -------------------------THE SIDE NAVIGATION MENU------------------------- */
 
 /* __________________________MEDIA QUERIES___________________________________ */
@@ -141,23 +158,21 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: aqua;
   }
 
   #smallerNavHeader {
-    border: solid 1px red;
+    width: 100%;
+    max-width: 1200px;
   }
 
   #biggerHeader {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
   }
 
   #theSlotArea {
-    display: flex;
-    justify-content: center;
-    padding: 1% 20.5%;
+    /* padding: 1% 20.5%; */
+    align-self: center;
     max-width: 1200px;
   }
 }
@@ -187,8 +202,8 @@ a {
   }
 
   .navbar {
-    border: solid 1px red;
-    padding: 1% 10%;
+    /* border: solid 1px rgb(0, 34, 255); */
+    padding: 1.2% 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -230,6 +245,16 @@ a {
 
   #theSlotArea {
     padding: 1% 8%;
+  }
+
+  #smallerNavHeader {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  #biggerHeader {
+    display: flex;
+    justify-content: center;
   }
 }
 

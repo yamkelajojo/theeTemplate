@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="selfSlot">
     <h2 class="main-padding">Home</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quod totam
@@ -14,4 +14,8 @@
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+#selfSlot {
+  align-self: center;
+}
+</style>
