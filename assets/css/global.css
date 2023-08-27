@@ -69,6 +69,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 #title {
   font-size: 2rem;
 }
@@ -92,6 +96,13 @@ a {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
 }
 
+footer.navbar {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
+  padding: 2% auto;
+}
+
 /* -------------------------THE SIDE NAVIGATION MENU------------------------- */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -100,16 +111,49 @@ a {
   z-index: 3; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #3f3f3f; /* Black*/
-  background-color: rgb(140, 150, 152);
+  background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
   display: flex;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 1px;
+}
+
+#sidenavTitleDiv,
+#sidenavLinksDiv {
+  /* padding: 20px 20px 0 20px; */
+  /* background-color: rgb(194, 194, 194); */
+  padding: 0 20px;
 }
 
 #sidenavTitleDiv {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 12%;
+  padding-bottom: 12%;
+  box-shadow: rgba(0, 0, 0, 0.068) 0px 1px 10px 1px;
+}
+
+#sidenavLinksDiv {
   padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.sidenavLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.041) 0px 1px 2px 0px;
+}
+
+.sidenavLink > a {
+  font-size: 1.2rem;
+}
+#sidenavTitle {
+  display: flex;
+  align-items: center;
 }
 
 /* The navigation menu links */
@@ -121,7 +165,7 @@ a {
 }
 
 #sidenavTitle {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -134,18 +178,6 @@ a {
   font-size: 36px;
 }
 
-#sidenavTitleDiv,
-#sidenavLinksDiv {
-  padding: 20px 20px 0 20px;
-  background-color: wheat;
-}
-
-footer.navbar {
-  display: flex;
-  justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
-  padding: 2% auto;
-}
 /* -------------------------THE SIDE NAVIGATION MENU------------------------- */
 
 /* __________________________MEDIA QUERIES___________________________________ */
@@ -179,7 +211,7 @@ footer.navbar {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  #hamburgerButton {
+  .hamburgerButton {
   }
 
   nav {
@@ -193,7 +225,7 @@ footer.navbar {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  #hamburgerButton {
+  .hamburgerButton {
     display: none !important;
   }
 
@@ -216,7 +248,7 @@ footer.navbar {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px) {
-  #hamburgerButton {
+  .hamburgerButton {
     justify-self: flex-start !important;
     /* align-self: center; */
   }
@@ -244,7 +276,7 @@ footer.navbar {
   }
 
   #theSlotArea {
-    padding: 1% 8%;
+    padding: 4% 8%;
   }
 
   #smallerNavHeader {
@@ -260,6 +292,18 @@ footer.navbar {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 5% 8%;
+  }
+
+  .logoDiv {
+    font-size: large;
+  }
+
+  #title {
+    font-size: 1rem;
+  }
+
   #navTabsDiv {
     display: none;
     background-color: saddlebrown;
@@ -268,9 +312,20 @@ footer.navbar {
     display: flex;
   } */
 
-  #hamburgerButton {
+  .hamburgerButton {
     justify-self: flex-start !important;
-    /* align-self: flex-start !important; */
+  }
+
+  #theSlotArea {
+    padding: 4% 8%;
+  }
+
+  footer.navbar {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px;
+    padding: 12px 0;
   }
 }
 /* __________________________MEDIA QUERIES___________________________________ */

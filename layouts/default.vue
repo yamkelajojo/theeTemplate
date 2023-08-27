@@ -3,7 +3,7 @@
     <header id="biggerHeader">
       <header id="smallerNavHeader">
         <nav class="navbar">
-          <button id="hamburgerButton" @click="toggleSideMenu">
+          <button class="hamburgerButton" @click="toggleSideMenu">
             <Icon name="nimbus:align-left" size="1.5rem" />
           </button>
           <div class="logoDiv">
@@ -27,19 +27,25 @@
     <transition name="leftSlide">
       <div class="sidenav" ref="sidenav" v-if="sideNavShown">
         <div id="sidenavTitleDiv">
-          <button id="hamburgerButton" @click="toggleSideMenu">
-            <Icon name="nimbus:close" size="1.2rem" />
+          <button class="hamburgerButton" @click="toggleSideMenu">
+            <Icon name="nimbus:close" size="1.1rem" />
           </button>
           <NuxtLink id="sidenavTitle" to="/" @click="toggleSideMenu">
-            <h1>TheSto'</h1>
+            <h1>ThaSto'</h1>
           </NuxtLink>
         </div>
         <div id="sidenavLinksDiv">
           <div class="sidenavLink">
-            <NuxtLink to="/products"><p>Products</p></NuxtLink>
+            <NuxtLink to="/products" @click="toggleSideMenu"
+              ><p>Products</p></NuxtLink
+            >
+            <Icon name="ic:round-shopping-basket" size="1rem" />
           </div>
           <div class="sidenavLink">
-            <NuxtLink to="/about"><p>About</p></NuxtLink>
+            <NuxtLink to="/about" @click="toggleSideMenu"
+              ><p>About</p></NuxtLink
+            >
+            <Icon name="ic:outline-info" size="1rem" />
           </div>
         </div>
       </div>

@@ -14,8 +14,4 @@
 
 <script setup></script>
 
-<style scoped>
-#selfSlot {
-  align-self: center;
-}
-</style>
+<style scoped></style>
