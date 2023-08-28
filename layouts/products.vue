@@ -75,6 +75,10 @@ const toggleSideMenu = () => {
   sideNavShown.value = !sideNavShown.value;
   console.log(sideNavShown.value);
 };
+
+definePageMeta({
+  layout: "products",
+});
 </script>
 
 <style scoped>
