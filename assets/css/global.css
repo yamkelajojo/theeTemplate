@@ -35,6 +35,12 @@
   padding: 1% 20.5%;
 }
 
+#productsGrid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -110,7 +116,7 @@ footer.navbar {
   position: fixed; /* Stay in place */
   z-index: 3; /* Stay on top */
   top: 0; /* Stay at the top */
-  left: 0;
+  right: 0;
   background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
   display: flex;
@@ -122,14 +128,14 @@ footer.navbar {
 #sidenavLinksDiv {
   /* padding: 20px 20px 0 20px; */
   /* background-color: rgb(194, 194, 194); */
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 #sidenavTitleDiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   padding-top: 12%;
   padding-bottom: 12%;
   box-shadow: rgba(0, 0, 0, 0.068) 0px 1px 10px 1px;
@@ -144,7 +150,7 @@ footer.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.041) 0px 1px 2px 0px;
 }
 
@@ -249,7 +255,7 @@ footer.navbar {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px) {
   .hamburgerButton {
-    justify-self: flex-start !important;
+    /* justify-self: flex-end !important; */
     /* align-self: center; */
   }
 

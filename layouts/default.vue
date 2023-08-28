@@ -3,19 +3,19 @@
     <header id="biggerHeader">
       <header id="smallerNavHeader">
         <nav class="navbar">
-          <button class="hamburgerButton" @click="toggleSideMenu">
-            <Icon name="nimbus:align-left" size="1.5rem" />
-          </button>
           <div class="logoDiv">
             <NuxtLink id="title" to="/">
               <h1>ThaSto'</h1>
             </NuxtLink>
           </div>
-          <ul id="navTabsDiv">
+          <button class="hamburgerButton" @click="toggleSideMenu">
+            <Icon name="nimbus:align-left" size="1.5rem" />
+          </button>
+          <div id="navTabsDiv">
             <NuxtLink to="/"><p>Home</p></NuxtLink>
             <NuxtLink to="/products"><p>Products</p></NuxtLink>
             <NuxtLink to="/about"><p>About</p></NuxtLink>
-          </ul>
+          </div>
         </nav>
       </header>
     </header>
@@ -36,16 +36,20 @@
         </div>
         <div id="sidenavLinksDiv">
           <div class="sidenavLink">
+            <NuxtLink to="/" @click="toggleSideMenu"><p>Home</p></NuxtLink>
+            <Icon name="ic:outline-house" size="1.1rem" />
+          </div>
+          <div class="sidenavLink">
             <NuxtLink to="/products" @click="toggleSideMenu"
               ><p>Products</p></NuxtLink
             >
-            <Icon name="ic:round-shopping-basket" size="1rem" />
+            <Icon name="ic:round-shopping-basket" size="1.1rem" />
           </div>
           <div class="sidenavLink">
             <NuxtLink to="/about" @click="toggleSideMenu"
               ><p>About</p></NuxtLink
             >
-            <Icon name="ic:outline-info" size="1rem" />
+            <Icon name="ic:outline-info" size="1.1rem" />
           </div>
         </div>
       </div>
